@@ -1,0 +1,43 @@
+{
+	"folders": {},
+	"connections": {
+		"postgres-jdbc-19a1ab1c421-598683d59b7310b1": {
+			"provider": "postgresql",
+			"driver": "postgres-jdbc",
+			"name": "PostgreSQL@db",
+			"save-password": true,
+			"configuration": {
+				"host": "db",
+				"port": "5432",
+				"database": "unipegaso_progetto",
+				"url": "jdbc:postgresql://db:5432/unipegaso_progetto",
+				"configurationType": "MANUAL",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-show-non-default-db@": "false"
+				},
+				"auth-model": "native",
+				"bootstrap": {
+					"autocommit": true
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": true,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800,
+			"auto-close-connections": true,
+			"close-connections-period": 14400
+		}
+	}
+}

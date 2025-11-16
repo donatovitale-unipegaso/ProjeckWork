@@ -1,0 +1,42 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: php_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./tesi/web:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_NAME=unipegaso_progetto
+      - DB_USER=unipegaso
+      - DB_PASS=unipegaso
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: postgres_db
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./tesi/postgresql/data:/var/lib/postgresql/data
+      - ./tesi/postgresql/backup:/var/lib/postgresql/backup
+      - ./tesi/postgresql/bin:/var/lib/postgresql/bin
+      
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:latest
+    container_name: cloudbeaver
+    restart: always
+    ports:
+      - "8978:8978"
+    volumes:
+      - ./tesi/cloudbeaver:/opt/cloudbeaver/workspace
+    depends_on:
+      - db
