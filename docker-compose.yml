@@ -27,7 +27,7 @@ services:
       - POSTGRES_PASSWORD=postgres
     volumes:
       - ./tesi/postgresql/data:/var/lib/postgresql/data
-      - ./tesi/postgresql/backup:/var/lib/postgresql/backup
+      - ./tesi/postgresql/init:/docker-entrypoint-initdb.d
       - ./tesi/postgresql/bin:/var/lib/postgresql/bin
       
   cloudbeaver:
