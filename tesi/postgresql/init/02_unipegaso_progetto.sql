@@ -1,3 +1,4 @@
+CREATE DATABASE unipegaso_progetto;
 --
 -- PostgreSQL database dump
 --
@@ -20,6 +21,8 @@ SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
+
+\connect unipegaso_progetto
 --
 -- Name: feedback; Type: TABLE; Schema: public; Owner: unipegaso
 --
