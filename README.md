@@ -1,26 +1,8 @@
-# ProjeckWork
-Applicazione web per la gestione della formazione e della sicurezza sul lavoro, eseguita in Docker tramite WSL su Windows 11.
+## Demo online (nessuna installazione richiesta)
 
-## Requisiti
+Il progetto è stato reso disponibile interamente online, quindi **non è più necessario utilizzare WSL** o configurare l’ambiente in locale solo per provarlo.
 
-- Windows 11
-- WSL installato e attivo
-- Docker Desktop installato e avviato
+- **Interfaccia web (Render):** https://projeckwork.onrender.com  
+- **Gestione Database (CloudBeaver su Railway):** https://cloudbeaver-production-8aaa.up.railway.app  
 
-## Installazione
-
-Da terminale WSL:
-
-git clone https://github.com/donatovitale-unipegaso/ProjeckWork.git
-
-cd ProjeckWork
-
-# Avvio dell’applicazione
-
-Sempre da WSL, come utente root nella cartella ProjeckWork:
-
-docker-compose up
-
-Aprire il browser e andare su:
-
-http://localhost:8080
+Tramite CloudBeaver è possibile consultare le tabelle, eseguire query e gestire il database PostgreSQL direttamente da browser(user e psw sono presenti all'interno della relazione).
